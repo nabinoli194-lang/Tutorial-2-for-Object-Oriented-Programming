@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class LogicalOperatorsCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input three numbers
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        System.out.print("Enter third number: ");
+        int num3 = sc.nextInt();
+
+        // Check using logical operators
+        if ((num1 + num2 == num3) && (num3 == num1 + num2)) {
+            System.out.println("The third number IS the sum of the first two.");
+        } else {
+            System.out.println("The third number is NOT the sum of the first two.");
+        }
+
+        sc.close();
+    }
+}
