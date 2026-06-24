@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class FitnessChallengeTracker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] steps = new int[7];
+        int totalSteps = 0;
+        int highestSteps = 0;
+
+        // Input: steps for 7 days
+        for (int i = 0; i < 7; i++) {
+            System.out.print("Enter steps for day " + (i + 1) + ": ");
+            steps[i] = sc.nextInt();
+            totalSteps += steps[i];
+
+            // Track highest steps
+            if (steps[i] > highestSteps) {
+                highestSteps = steps[i];
+            }
+        }
+
+        // Calculate average
+        double averageSteps = (double) totalSteps / 7;
+
+        // Display results
+        System.out.println("\n--- Fitness Challenge Report ---");
+        System.out.println("Total Steps: " + totalSteps);
+        System.out.println("Average Steps per Day: " + averageSteps);
+        System.out.println("Highest Steps in a Day: " + highestSteps);
+
+        sc.close();
+    }
+}
