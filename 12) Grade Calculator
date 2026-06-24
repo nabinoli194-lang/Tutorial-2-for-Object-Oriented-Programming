@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input marks
+        System.out.print("Enter marks obtained (0-100): ");
+        int marks = sc.nextInt();
+
+        // Grade calculation using ternary operator
+        String grade = (marks >= 90) ? "A+" :
+                       (marks >= 80) ? "A"  :
+                       (marks >= 70) ? "B"  :
+                       (marks >= 60) ? "C"  :
+                       (marks >= 50) ? "D"  : "F";
+
+        // Display result
+        System.out.println("Marks: " + marks + " → Grade: " + grade);
+
+        sc.close();
+    }
+}
